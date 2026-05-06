@@ -10,19 +10,19 @@ const codingProfiles = [
   {
     platform: "LeetCode",
     stats: "200+ Problems Solved",
-    link: "https://leetcode.com/u/syeduzaiir/",
+    link: "https://leetcode.com/u/uzairmohiuddin/",
     color: "text-yellow-500",
   },
   {
     platform: "Codeforces",
-    stats: "Active Participant",
-    link: "#",
+    stats: "1200+ Rating",
+    link: "https://codeforces.com/profile/UzairMohiuddin",
     color: "text-blue-500",
   },
   {
     platform: "CodeChef",
-    stats: "Competitive Programmer",
-    link: "#",
+    stats: "1400+ Rating",
+    link: "https://www.codechef.com/users/uzair_777",
     color: "text-amber-700",
   },
 ];
