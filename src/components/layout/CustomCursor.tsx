@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { useTheme } from "@/context/ThemeContext";
 
 const FLOCK_SIZE = 10;
 
@@ -21,6 +22,7 @@ export const CustomCursor = () => {
   const mouseRef = useRef({ x: -100, y: -100 });
   const isMovingRef = useRef(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const { isNight } = useTheme();
 
   const birdsDataRef = useRef<BirdParams[] | null>(null);
 
@@ -108,7 +110,7 @@ export const CustomCursor = () => {
           ref={(el) => {
             if (el) birdsRef.current[index] = el;
           }}
-          className="absolute top-0 left-0 w-6 h-6 -ml-3 -mt-3 text-slate-800 dark:text-slate-200 opacity-80"
+          className={`absolute top-0 left-0 w-6 h-6 -ml-3 -mt-3 opacity-80 ${isNight ? 'text-slate-200' : 'text-black'}`}
           style={{ willChange: "transform" }}
         >
           {/* Simple Bird SVG */}
