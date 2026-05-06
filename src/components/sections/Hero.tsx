@@ -23,7 +23,7 @@ export const Hero = () => {
         </motion.p>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-balance">
-          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color)] to-purple-500">Syed Uzair Mohiuddin</span>
+          Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color)] to-purple-500">Syed Uzair Mohiuddin</span>
         </h1>
         
         <h2 className="text-2xl md:text-3xl text-[var(--text-secondary)] font-medium mb-8">

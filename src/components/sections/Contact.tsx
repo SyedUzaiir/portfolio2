@@ -28,7 +28,7 @@ export const Contact = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">Let&apos;s Connect</h2>
         <div className="w-20 h-1 bg-[var(--accent-color)] mx-auto rounded-full"></div>
         <p className="mt-6 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
           Whether you have a question, a project idea, or just want to say hi, my inbox is always open.

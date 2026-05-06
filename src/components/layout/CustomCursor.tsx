@@ -22,21 +22,23 @@ export const CustomCursor = () => {
   const isMovingRef = useRef(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const birdsDataRef = useRef<BirdParams[]>(
-    Array.from({ length: FLOCK_SIZE }).map(() => ({
-      x: -100,
-      y: -100,
-      vx: 0,
-      vy: 0,
-      angle: 0,
-      ease: Math.random() * 0.05 + 0.02, // Different easing for natural flocking
-      offsetX: (Math.random() - 0.5) * 40,
-      offsetY: (Math.random() - 0.5) * 40,
-      scale: Math.random() * 0.5 + 0.5,
-    }))
-  );
+  const birdsDataRef = useRef<BirdParams[] | null>(null);
 
   useEffect(() => {
+    if (!birdsDataRef.current) {
+      birdsDataRef.current = Array.from({ length: FLOCK_SIZE }).map(() => ({
+        x: -100,
+        y: -100,
+        vx: 0,
+        vy: 0,
+        angle: 0,
+        ease: Math.random() * 0.05 + 0.02,
+        offsetX: (Math.random() - 0.5) * 40,
+        offsetY: (Math.random() - 0.5) * 40,
+        scale: Math.random() * 0.5 + 0.5,
+      }));
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       mouseRef.current = { x: e.clientX, y: e.clientY };
       isMovingRef.current = true;
@@ -54,6 +56,7 @@ export const CustomCursor = () => {
     const animate = () => {
       const mouse = mouseRef.current;
       const birdsData = birdsDataRef.current;
+      if (!birdsData) return;
 
       birdsData.forEach((bird, index) => {
         const targetX = mouse.x + bird.offsetX;
