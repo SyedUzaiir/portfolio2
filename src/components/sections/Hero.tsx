@@ -48,7 +48,9 @@ export const Hero = () => {
           <motion.a 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1a6Af3dS9XmroOHOMRj1LjTLKQAyzHySB/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 border border-[var(--card-border)] bg-[var(--card-bg)] backdrop-blur-md rounded-full font-medium transition-transform shadow-sm"
           >
             <Download className="w-4 h-4" /> Resume
